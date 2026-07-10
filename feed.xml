@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>The Quiet Table</title>
+    <link>https://thequiettable.co</link>
+    <description>Slow, seasonal recipes and the stories that go with them.</description>
+    <language>en</language>
+    <lastBuildDate>Tue, 30 Jun 2026 09:04:47 +0000</lastBuildDate>
+    <item>
+      <title>Summer Tomato &amp; Basil Pasta</title>
+      <link>https://thequiettable.co/recipes/summer-tomato-basil-pasta.html</link>
+      <guid>https://thequiettable.co/recipes/summer-tomato-basil-pasta.html</guid>
+      <category>Pasta</category>
+      <pubDate>Fri, 05 Jun 2026 00:00:00 +0000</pubDate>
+      <description>The first warm evening of the year, on a plate.</description>
+    </item>
+    <item>
+      <title>Lemon &amp; Thyme Roast Chicken</title>
+      <link>https://thequiettable.co/recipes/lemon-thyme-roast-chicken.html</link>
+      <guid>https://thequiettable.co/recipes/lemon-thyme-roast-chicken.html</guid>
+      <category>Mains</category>
+      <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+      <description>A Sunday ritual, with brown butter pan juices.</description>
+    </item>
+    <item>
+      <title>Fig &amp; Honey Tart</title>
+      <link>https://thequiettable.co/recipes/fig-honey-tart.html</link>
+      <guid>https://thequiettable.co/recipes/fig-honey-tart.html</guid>
+      <category>Sweets</category>
+      <pubDate>Sun, 10 May 2026 00:00:00 +0000</pubDate>
+      <description>Late summer figs on a buttery, almost-shortbread crust.</description>
+    </item>
+    <item>
+      <title>Wild Mushroom Risotto</title>
+      <link>https://thequiettable.co/recipes/wild-mushroom-risotto.html</link>
+      <guid>https://thequiettable.co/recipes/wild-mushroom-risotto.html</guid>
+      <category>Mains</category>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+      <description>Slow stirring, a quiet kitchen, a glass of something white.</description>
+    </item>
+    <item>
+      <title>Everyday Sourdough</title>
+      <link>https://thequiettable.co/recipes/everyday-sourdough.html</link>
+      <guid>https://thequiettable.co/recipes/everyday-sourdough.html</guid>
+      <category>Bread</category>
+      <pubDate>Sun, 12 Apr 2026 00:00:00 +0000</pubDate>
+      <description>The loaf I bake on Saturdays, almost without thinking.</description>
+    </item>
+  </channel>
+</rss>
