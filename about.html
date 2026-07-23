@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Lora:ital,wght@0,400..700;1,400..600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=4" />
+<link rel="stylesheet" href="styles.css?v=7" />
 <link rel="canonical" href="https://thequiettable.co/about.html" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://thequiettable.co/about.html" />
@@ -22,7 +22,7 @@
 <link rel="icon" type="image/png" href="icon-512.png" sizes="512x512" />
 <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180" />
 <!-- analytics: remove this line to disable -->
-<script data-goatcounter="https://quiettable.goatcounter.com/count"
+<script data-goatcounter="https://YOUR_CODE.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
@@ -33,11 +33,15 @@
     <span class="tagline">enjoy the serenity</span>
   </div>
   <nav>
-    <a class="navlink" href="index.html">Home</a>
-    <a class="navlink" href="recipes.html">Recipes</a>
-    <a class="navlink" href="about.html">About</a>
+    <a class="navlink" href="index.html" data-en="Home" data-bn="প্রথম পাতা"></a>
+    <a class="navlink" href="recipes.html" data-en="Recipes" data-bn="রেসিপি"></a>
+    <a class="navlink" href="about.html" data-en="About" data-bn="পরিচিতি"></a>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button data-set="en" class="active">EN</button>
+      <button data-set="bn">বাংলা</button>
+    </div>
     <a class="navlink ig-nav" href="https://www.instagram.com/t.q.t_07/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="ig-glyph" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4" ry="5.4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1.15" fill="currentColor"/></svg><span class="ig-nav-handle">@t.q.t_07</span></a>
-    <a class="subscribe fill" href="newsletter.html">Subscribe</a>
+    <a class="subscribe fill" href="newsletter.html" data-en="Subscribe" data-bn="সাবস্ক্রাইব"></a>
   </nav>
 </header>
 
@@ -45,24 +49,59 @@
   <div class="wrap about-page">
     <img src="assets/portrait-BlexZORH.webp" alt="Portrait of Sabarnya" width="1000" height="1100" loading="lazy" decoding="async" />
     <div>
-      <p class="eyebrow">hello, I'm</p>
-      <h1><span class="script">Sabarnya.</span></h1>
-      <p>I cook the way my grandmother did — slowly, generously, and almost always with the radio on. This site is a notebook of the recipes I keep going back to, along with the small reasons I love each one.</p>
-      <p>By day I write; by evening I'm usually elbow-deep in flour or trying to coax something tender out of a pot. Everything here has been tested in a small home kitchen with imperfect ovens, real budgets, and the occasional dinner guest who arrives an hour early.</p>
+      <p class="eyebrow" data-en="hello, I&#39;m" data-bn="নমস্কার, আমি"></p>
+      <h1 data-en="&lt;span class=&#39;script&#39;&gt;Sabarnya.&lt;/span&gt;" data-bn="&lt;span class=&#39;script&#39;&gt;সাবর্ণ্য।&lt;/span&gt;"></h1>
+      <p data-en="A home cook with far more curiosity than measuring cups — and a stubborn belief that every recipe is carrying a story." data-bn="গল্প, স্মৃতি আর কৌতূহল—এই তিনটি নিয়েই আমার রান্নাঘর।"></p>
+      <p data-en="You&rsquo;ll find comfort food and quiet experiments here, flavours that wander between cultures, and never a recipe without its tale attached: a memory, a scrap of history, something that made me smile at the stove. I don&rsquo;t stand in front of cameras. I&rsquo;d rather walk you into my kitchen with words." data-bn="এখানে পাবেন চেনা স্বাদের নতুন পথচলা, ঘরোয়া খাবারের উষ্ণতা, আর প্রতিটি রেসিপির সঙ্গে জড়ানো একটি ছোট্ট গল্প কিংবা মজার তথ্য। ক্যামেরার সামনে দাঁড়ানো আমার স্বভাব নয়—আমি বরং শব্দ দিয়েই আপনাকে আমার রান্নাঘরে ডেকে নিতে চাই।"></p>
+      <p class="about-welcome" data-en="Welcome to <em>The Quiet Table</em>. Pull up a chair — there&rsquo;s always room for one more." data-bn="<em>The Quiet Table</em>-এ স্বাগতম। বসুন, গল্প হোক, রান্না হোক।"></p>
       <div class="actions">
-        <a class="btn btn-solid" href="recipes.html">See the recipes</a>
-        <a class="btn btn-ghost" href="newsletter.html">Newsletter →</a>
+        <a class="btn btn-solid" href="recipes.html" data-en="See the recipes" data-bn="রান্নাগুলো দেখুন"></a>
+        <a class="btn btn-ghost" href="newsletter.html" data-en="Newsletter →" data-bn="নিউজলেটার →"></a>
       </div>
     </div>
   </div>
 </section>
 
+<section class="about-story">
+  <div class="wrap">
+      <p class="eyebrow" data-en="the longer story" data-bn="একটু বিস্তারিত"></p>
+      <p data-en="A recipe is rarely just about food. It carries a whole kitchen with it — the rhythm of familiar hands, conversations that outlasted dinner, and the quietest kind of love there is: someone asking whether you&rsquo;ve eaten yet." data-bn="আমার কাছে রান্না কখনও শুধু একটা রেসিপি নয়। প্রতিটি রান্নার ভেতরে থেকে যায় একটা বাড়ি, একটা রান্নাঘর, উনুনের ধোঁয়ায় মিশে থাকা বিকেল, আর সেই চেনা ডাক—&ldquo;আর একটু দিই?&rdquo;"></p>
+      <p data-en="My fondest food memories come from kitchens with no measuring cups in them. Mothers and grandmothers who cooked by instinct, who kept their recipes in their hands rather than on paper, and who served every meal with something extra — a story, a family myth, a piece of wisdom nobody had thought to write down." data-bn="আমাদের অনেকেরই খাবারের সবচেয়ে প্রিয় স্মৃতি তৈরি হয়েছে মা আর ঠাকুমার রান্নাঘরে। সেখানে মাপার চামচের চেয়ে বেশি ভরসা ছিল অভ্যাসে, লেখা রেসিপির চেয়ে বেশি ছিল হাতের স্মৃতিতে। আর প্রতিটি পদ সঙ্গে করে নিয়ে আসত কোনো পারিবারিক গল্প, ছোট্ট কোনো কৌতুক, কিংবা এমন এক টুকরো স্মৃতি—যা কেবল সেই রান্নাঘরেই বেঁচে থাকে।"></p>
+      <p data-en="Somewhere along the way we became very good at preserving the recipe, and rather worse at preserving the warmth around it." data-bn="সময়ের সঙ্গে আমরা রেসিপি লিখে রাখতে শিখেছি ঠিকই, কিন্তু সেই উষ্ণতা—যা আগুন থেকে নয়, মানুষ থেকে আসে—তা একটু একটু করে হারিয়ে ফেলেছি।"></p>
+      <blockquote class="story-quote" data-en="This little corner of the internet is my attempt to bring some of that warmth back." data-bn="<em>The Quiet Table</em> সেই হারিয়ে যাওয়া উষ্ণতা ফিরে পাওয়ারই একটি ছোট্ট চেষ্টা।"></blockquote>
+      <p data-en="The cooking here doesn&rsquo;t much respect borders. I like wandering between cuisines, borrowing from distant tables, putting familiar ingredients in unfamiliar company — and now and then finding that an experiment has quietly earned its place beside the old favourites. None of it is meant to replace tradition. Tradition has always grown by being curious." data-bn="নতুন স্বাদ খুঁজতে আমি ভালোবাসি। কখনও দূর দেশের কোনো কৌশল মিশে যায় ছোটবেলার চেনা স্বাদে, কখনও বহুদিনের পুরনো পদ ফিরে আসে একেবারে নতুন চেহারায়। ঐতিহ্যকে ভাঙার দরকার হয় না; শুধু নতুন পথ দেখিয়ে দিলেই হয়। নদী যেমন উৎস ভোলে না, রেসিপিও তেমন শিকড় হারায় না—সে কেবল নতুন তীরে গিয়ে পৌঁছয়।"></p>
+      <p data-en="So every recipe here comes with more than instructions. Sometimes a story. Sometimes a forgotten way of cooking. Sometimes an odd scrap of history that made me smile while I stirred. If a dish can feed the imagination as well as the stomach, I think it has done its work." data-bn="তাই এখানে প্রতিটি রেসিপির সঙ্গে থাকে আরও একটি গল্প। কখনও সেই রান্নার জন্মকথা, কখনও ভুলে যাওয়া কোনো খাদ্যসংস্কৃতির ইতিহাস, কখনও ছোট্ট কোনো মজার তথ্য—আবার কখনও এমন এক স্মৃতি, যা হয়তো আপনাকেও আপনার নিজের রান্নাঘরে ফিরিয়ে নিয়ে যাবে।"></p>
+      <p data-en="One thing you should know before you settle in." data-bn="আর একটা কথা আগেভাগেই বলে রাখি।"></p>
+      <p data-en="You won&rsquo;t find many photographs of me. I&rsquo;m almost never in front of a camera, and I don&rsquo;t film myself cooking — not because I mind sharing, but because I&rsquo;ve always felt the food deserves the light. This is my way of opening the kitchen door without standing in the middle of it. I&rsquo;d rather tell you a story than ask you to watch me make one." data-bn="আমার খুব বেশি ছবি এখানে পাবেন না। রান্নার ফাঁকে ক্যামেরার সামনে দাঁড়ানো বা ভিডিও বানানো—এসব আমার স্বভাবের সঙ্গে কোনোদিন মেলেনি। আমি বিশ্বাস করি, একটা ভালো গল্প, একটা আন্তরিক রেসিপি আর একটা সুন্দর স্বাদ—এই তিনটিই মানুষকে সবচেয়ে কাছে টানে। তাই এই লেখা, এই ওয়েবসাইট—এসবই আমার রান্নাঘরের দরজা খুলে দেওয়ার উপায়।"></p>
+      <p data-en="So pull up a chair." data-bn="আপনি এসেছেন, এটুকুই আমার প্রাপ্তি। একটু বসুন।"></p>
+      <p data-en="Take your time. Read a little, cook a little, and follow any recipe that leads you somewhere unexpected." data-bn="হয়তো একটা রেসিপি পড়বেন, হয়তো কোনো গল্পে হারিয়ে যাবেন, কিংবা হয়তো আজই নতুন কোনো স্বাদের সঙ্গে আলাপ হবে।"></p>
+      <p class="story-close" data-en="I hope these pages feel like an afternoon in a kitchen where someone is always glad to set another plate." data-bn="এই নীরব টেবিলে আপনার জন্য একটি আসন সবসময়ই রাখা আছে।"></p>
+  </div>
+</section>
+
 <footer class="site-footer">
-  <a class="ig-link" href="https://www.instagram.com/t.q.t_07/" target="_blank" rel="noopener noreferrer" aria-label="The Quiet Table on Instagram"><span class="ig-invite">come say hello</span><svg class="ig-glyph" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4" ry="5.4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1.15" fill="currentColor"/></svg><span class="ig-handle">@t.q.t_07</span></a>
-  <p>© 2026 The Quiet Table — enjoy the serenity.</p>
+  <a class="ig-link" href="https://www.instagram.com/t.q.t_07/" target="_blank" rel="noopener noreferrer" aria-label="The Quiet Table on Instagram"><span class="ig-invite" data-en="come say hello" data-bn="দেখা হোক ইনস্টাগ্রামে"></span><svg class="ig-glyph" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><rect x="2.6" y="2.6" width="18.8" height="18.8" rx="5.4" ry="5.4" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.2" cy="6.8" r="1.15" fill="currentColor"/></svg><span class="ig-handle">@t.q.t_07</span></a>
+  <p data-en="© 2026 The Quiet Table — enjoy the serenity." data-bn="© ২০২৬ দ্য কোয়ায়েট টেবল — প্রশান্তি উপভোগ করুন।"></p>
 </footer>
 
 <script defer src="charm.js?v=2"></script>
-<script defer src="mood.js?v=1"></script>
+<script defer src="mood.js?v=2"></script>
+<script>
+  function setLang(lang){
+    document.body.classList.toggle('bn', lang === 'bn');
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-en]').forEach(function(el){
+      var t = el.getAttribute('data-' + lang);
+      if (t !== null) el.innerHTML = t;
+    });
+    document.querySelectorAll('.lang-toggle button').forEach(function(b){
+      b.classList.toggle('active', b.dataset.set === lang);
+    });
+  }
+  document.querySelectorAll('.lang-toggle button').forEach(function(b){
+    b.addEventListener('click', function(){ setLang(b.dataset.set); });
+  });
+  setLang('en');
+</script>
 </body>
 </html>
