@@ -4,8 +4,8 @@
    ========================================================= */
 :root{
   --bg:#e8efd8;          /* pale sage green */
-  --ink:#26301c;         /* deep forest green (headings, text) */
-  --ink-soft:#333d28;    /* body copy — darkened for readability */
+  --ink:#1f2817;         /* near-black forest green */
+  --ink-soft:#2b3421;    /* body copy — darker for readability */
   --muted:#7e886a;       /* uppercase section labels */
   --accent:#c0704a;      /* terracotta (script labels) */
   --script-green:#5f7042;/* script accent words */
@@ -139,7 +139,7 @@ nav a:hover{color:var(--accent)}
 .meta .v{font-family:var(--sans);font-size:1.1rem;color:var(--ink)}
 .recipe-hero{max-width:1200px;margin:48px auto;border-radius:var(--radius);overflow:hidden;aspect-ratio:16/10}
 .recipe-hero img{width:100%;height:100%;object-fit:cover}
-.article-body{max-width:840px;margin:0 auto;padding:0 32px 64px}
+.article-body{max-width:none;margin:0 auto;padding:0 0 64px}
 .article-body h2{font-size:2rem;margin:.2rem 0 1.2rem}
 .article-body p{color:var(--ink-soft);margin-bottom:1.1rem}
 .recipe-split .recipe-flow li{color:var(--ink-soft)}
@@ -190,8 +190,8 @@ body.bn .cat,body.bn .meta .k,body.bn .block .label{font-family:"Hind Siliguri",
 :root{
   --bg:#ece1cb;          /* aged parchment */
   --bg-alt:#e4d6bb;
-  --ink:#3b3226;         /* dark sepia */
-  --ink-soft:#6a5c46;
+  --ink:#2e271c;         /* dark sepia */
+  --ink-soft:#4a3f2e;    /* darker sepia body */
   --muted:#8c7d64;
   --accent:#b0653f;      /* faded terracotta */
   --script-green:#6c7350;/* dusty olive */
