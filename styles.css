@@ -127,7 +127,7 @@ nav a:hover{color:var(--accent)}
 .coming li::before{content:"";position:absolute;left:0;top:.6em;width:7px;height:7px;border-radius:50%;background:var(--accent)}
 
 /* ---------- recipe article ---------- */
-.article{max-width:1000px;margin:0 auto;padding:56px clamp(20px,5vw,40px) 0}
+.article{width:90%;max-width:1500px;margin:0 auto;padding:56px clamp(20px,4vw,48px) 0}
 .back{font-size:.95rem;color:var(--ink-soft);display:inline-block;margin-bottom:40px;transition:.2s}
 .back:hover{color:var(--accent)}
 .article .cat{font-family:var(--script);font-size:1.6rem;color:var(--accent);font-weight:600;line-height:1;display:block;margin-bottom:.3rem}
@@ -137,7 +137,7 @@ nav a:hover{color:var(--accent)}
 .meta .row{display:flex;align-items:baseline;gap:10px}
 .meta .k{font-family:var(--script);font-size:1.3rem;color:var(--accent);font-weight:600;line-height:1}
 .meta .v{font-family:var(--sans);font-size:1.1rem;color:var(--ink)}
-.recipe-hero{max-width:1200px;margin:48px auto;border-radius:var(--radius);overflow:hidden;aspect-ratio:16/10}
+.recipe-hero{width:90%;max-width:1600px;margin:48px auto;border-radius:var(--radius);overflow:hidden;aspect-ratio:16/10}
 .recipe-hero img{width:100%;height:100%;object-fit:cover}
 .article-body{max-width:none;margin:0 auto;padding:0 0 64px}
 .article-body h2{font-size:2rem;margin:.2rem 0 1.2rem}
@@ -573,9 +573,9 @@ body.evening .candle{opacity:1}
 /* ============================================================
    RECIPE SPLIT — sticky ingredient notes (left) + scrolling method (right)
    ============================================================ */
-.recipe-split{display:grid;grid-template-columns:minmax(260px,0.8fr) 1.2fr;
-  gap:clamp(28px,4vw,64px);
-  align-items:start;max-width:1440px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.recipe-split{display:grid;grid-template-columns:minmax(300px,0.75fr) 1.25fr;
+  gap:clamp(32px,4vw,72px);
+  align-items:start;width:90%;max-width:1600px;margin:0 auto;padding:0 clamp(20px,3vw,40px)}
 
 /* Left column sticks in view while the right column scrolls past it */
 .ing-panel{position:sticky;top:96px;align-self:start;
@@ -618,9 +618,12 @@ body.evening .ing-panel ul.ingredients li:nth-child(4n+4){--note:#c6d0e6}
 .recipe-flow .block:first-child{margin-top:0}
 
 /* Story + closing note run full-width as normal paragraphs (not columned) */
-.recipe-intro,.recipe-outro{max-width:820px;margin:0 auto;
-  padding:0 clamp(20px,5vw,40px)}
+.recipe-intro,.recipe-outro{width:90%;max-width:1180px;margin:0 auto;
+  padding:0 clamp(20px,4vw,48px)}
 .recipe-intro{padding-bottom:8px}
+@media(min-width:1200px){
+  .recipe-intro .block > p{column-gap:56px}
+}
 .recipe-intro .block,.recipe-outro .block{margin:0}
 .recipe-intro p,.recipe-outro p{font-size:1.12rem;line-height:1.85;
   color:var(--ink-soft);margin-bottom:1.15rem}
@@ -635,14 +638,17 @@ body.evening .ing-panel ul.ingredients li:nth-child(4n+4){--note:#c6d0e6}
 @media(min-width:1100px){
   .ing-panel ul.ingredients li{font-size:1.02rem}
 }
+@media(min-width:1500px){
+  .ing-panel ul.ingredients li{width:calc(33.333% - 11px)}
+}
 
 
 /* Stack on narrow screens: notes on top, then the method; nothing sticky */
 @media(max-width:900px){
-  .recipe-split{grid-template-columns:1fr;gap:26px;max-width:820px}
+  .recipe-split{grid-template-columns:1fr;gap:26px;width:92%;max-width:900px}
   .ing-panel{position:static;max-height:none;overflow:visible}
-  .ing-panel ul.ingredients li{min-height:84px}
-  .recipe-intro,.recipe-outro{max-width:820px}
+  .ing-panel ul.ingredients li{min-height:84px;width:calc(50% - 8px)}
+  .recipe-intro,.recipe-outro{width:92%;max-width:900px}
 }
 @media(max-width:420px){
   .ing-panel ul.ingredients li{width:100%}
@@ -650,10 +656,12 @@ body.evening .ing-panel ul.ingredients li:nth-child(4n+4){--note:#c6d0e6}
 
 /* phones: use the width, keep only a slim gutter */
 @media(max-width:560px){
-  .recipe-intro,.recipe-outro{padding-left:16px;padding-right:16px}
-  .recipe-split{padding-left:16px;padding-right:16px}
-  .article{padding-left:16px;padding-right:16px}
+  .recipe-intro,.recipe-outro,.recipe-split{width:auto;max-width:none;
+    margin-left:0;margin-right:0;padding-left:18px;padding-right:18px}
+  .article{width:auto;max-width:none;padding-left:18px;padding-right:18px}
+  .recipe-hero{width:auto;max-width:none;margin-left:16px;margin-right:16px}
   .recipe-intro p,.recipe-outro p{font-size:1.06rem;line-height:1.8}
+  .ing-panel ul.ingredients li{width:100%}
 }
 
 @media (prefers-reduced-motion: reduce){
