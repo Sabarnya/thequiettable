@@ -67,6 +67,39 @@ nav a:hover{color:var(--accent)}
 .about{padding:120px 0}
 .about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(36px,5vw,60px);align-items:center}
 .about-grid img{width:100%;border-radius:16px;aspect-ratio:3/2;object-fit:cover;box-shadow:0 20px 50px -30px rgba(47,59,39,.5)}
+
+/* ============================================================
+   ABOUT — image floats, the whole write-up wraps around it
+   ============================================================ */
+.about-wrap-sec{padding:64px 0 100px}
+.about-wrap{max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,44px)}
+.about-wrap::after{content:"";display:block;clear:both}
+
+/* the picture: float left, show the FULL image (no crop), sized to leave room to wrap */
+.about-figure{float:left;width:min(46%,460px);margin:6px 32px 20px 0;padding:0}
+.about-figure img{display:block;width:100%;height:auto;border-radius:16px;
+  box-shadow:0 24px 60px -30px rgba(47,59,39,.6)}
+
+/* intro heading sits to the right of the image top */
+.about-wrap .eyebrow{margin-top:0}
+.about-wrap h1{font-size:clamp(2.6rem,5vw,3.8rem);margin:.2rem 0 .6rem;line-height:1}
+.about-wrap h1 .script{font-size:1.05em}
+.about-wrap > p,.about-wrap blockquote{color:var(--ink-soft);
+  font-size:1.08rem;line-height:1.85;margin:0 0 1.15rem}
+.about-wrap .story-quote{margin:1.6em 0;padding:.6em 0 .6em 1.4em;
+  border-left:3px solid var(--accent);font-family:var(--serif);
+  font-style:italic;color:var(--ink)}
+.about-wrap .story-quote em{font-family:var(--script);font-style:normal;
+  font-size:1.25em;color:var(--accent)}
+/* the "the longer story" label that separates intro from the deep story */
+.about-wrap .eyebrow:not(:first-of-type){display:block;clear:none;margin-top:2em}
+
+/* On phones: image goes full width on top, text flows normally below (no float) */
+@media(max-width:720px){
+  .about-figure{float:none;width:100%;max-width:520px;margin:0 auto 28px}
+  .about-wrap{text-align:left}
+}
+
 .about h2{font-size:clamp(2rem,4.4vw,3.1rem)}
 .about h2 .script{font-size:1.25em;display:inline-block;line-height:.9}
 .about p{color:var(--ink-soft);max-width:48ch;margin:1.5rem 0 2rem}
@@ -101,12 +134,12 @@ nav a:hover{color:var(--accent)}
 .recipe-grid .ccard{min-height:340px}
 
 /* ---------- about page ---------- */
-.about-page{max-width:1160px;margin:0 auto;padding:72px clamp(20px,5vw,40px) 84px;display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(36px,5vw,60px);align-items:center}
-.about-page img{width:100%;border-radius:16px;aspect-ratio:3/2;object-fit:cover;box-shadow:0 24px 60px -30px rgba(47,59,39,.6)}
-.about-page h1{font-size:clamp(3rem,6vw,4.4rem);margin:.3rem 0 0}
-.about-page h1 .script{font-size:1.1em}
-.about-page p{color:var(--ink-soft);margin:1.2rem 0;max-width:52ch}
-.about-page .actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:1.4rem}
+
+
+
+
+
+
 
 /* ---------- newsletter ---------- */
 .news{position:relative;padding:130px 0;text-align:center;overflow:hidden}
@@ -170,12 +203,12 @@ body.bn .cat,body.bn .meta .k,body.bn .block .label{font-family:"Hind Siliguri",
   .site-header{padding:14px 22px}
   .site-header.over{padding:16px 22px}
   .tagline{display:none}
-  .about-grid,.about-page{grid-template-columns:1fr;gap:28px;justify-items:center;text-align:center}
-  .about-grid img,.about-page img{max-width:560px}
-  .about-page p{margin-left:auto;margin-right:auto}
+  .about-grid,
+  .about-grid img,
+  
   .bento,.recipe-grid,.related .bento{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}
   .ccard.feat{grid-row:auto;min-height:300px}
-  .about,.week,.news,.about-page{padding-top:80px;padding-bottom:80px}
+  .about,.week,.news,
 }
 @media(max-width:540px){
   .meta{gap:28px}
@@ -771,7 +804,7 @@ body.nav-open .nav-scrim{opacity:1;visibility:visible}
 
   /* calmer rhythm */
   .hero-art{max-height:58vh}
-  .about,.week,.news,.about-page{padding-top:56px;padding-bottom:56px}
+  .about,.week,.news,
   .week{padding-bottom:64px}
   .week h2{margin-bottom:32px}
   .ccard{min-height:230px}
@@ -817,8 +850,8 @@ body.nav-open .nav-scrim{opacity:1;visibility:visible}
   color:var(--accent);margin-top:1.4rem}
 .about-welcome em{font-style:normal}
 
-.about-story{max-width:1160px;margin:0 auto;padding:8px clamp(20px,5vw,40px) 100px}
-.about-story .wrap{max-width:820px;margin-left:0}
+
+
 .about-story .eyebrow{margin-bottom:1.8em}
 .about-story p{font-size:1.1rem;line-height:1.85;color:var(--ink-soft);
   margin:0 0 1.5em;max-width:66ch}
@@ -837,7 +870,7 @@ body.nav-open .nav-scrim{opacity:1;visibility:visible}
   color:var(--script-green)!important;margin-top:1.8em!important}
 
 @media(max-width:760px){
-  .about-story{padding:8px 0 64px}
+  
   .about-story p{font-size:1.03rem;line-height:1.8}
   .story-quote{padding-left:1.1em;margin:2em 0}
   .about-welcome{font-size:1.4rem}
