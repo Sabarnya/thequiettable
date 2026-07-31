@@ -17,21 +17,9 @@ SITE_DESC  = "Slow, seasonal recipes and the stories that go with them."
 
 # ---- Newest first. date = when published (YYYY-MM-DD). ----
 RECIPES = [
-  {"slug":"summer-tomato-basil-pasta","title":"Summer Tomato & Basil Pasta",
-   "category":"Pasta","date":"2026-06-05",
-   "description":"The first warm evening of the year, on a plate."},
-  {"slug":"lemon-thyme-roast-chicken","title":"Lemon & Thyme Roast Chicken",
-   "category":"Mains","date":"2026-05-24",
-   "description":"A Sunday ritual, with brown butter pan juices."},
-  {"slug":"fig-honey-tart","title":"Fig & Honey Tart",
-   "category":"Sweets","date":"2026-05-10",
-   "description":"Late summer figs on a buttery, almost-shortbread crust."},
-  {"slug":"wild-mushroom-risotto","title":"Wild Mushroom Risotto",
-   "category":"Mains","date":"2026-04-28",
-   "description":"Slow stirring, a quiet kitchen, a glass of something white."},
-  {"slug":"everyday-sourdough","title":"Everyday Sourdough",
-   "category":"Bread","date":"2026-04-12",
-   "description":"The loaf I bake on Saturdays, almost without thinking."},
+  {"slug":"from-failure-ricotta-cake","title":"Alchemy of Failure",
+   "category":"Sweets","date":"2026-07-20",
+   "description":"A failed bake that became something better."},
 ]
 
 def rfc822(date_str):

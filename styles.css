@@ -42,6 +42,9 @@ img{display:block;max-width:100%}
 /* ---------- header ---------- */
 .site-header{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;
   padding:18px 44px;background:var(--bg);border-bottom:1px solid var(--line)}
+/* nav now holds links + language toggle + instagram + subscribe in one row */
+.site-header nav{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.nav-right{display:flex;align-items:center;gap:18px}
 .site-header.over{position:absolute;left:0;right:0;background:transparent;border:none;padding:22px 44px}
 .brand-wrap{display:flex;align-items:baseline;gap:14px}
 .brand{font-family:var(--script);font-size:1.9rem;font-weight:600;color:var(--ink);line-height:1}
@@ -799,16 +802,38 @@ body.nav-open .nav-scrim{opacity:1;visibility:visible}
   .site-header nav .subscribe{margin-top:22px;text-align:center;padding:15px 20px;
     font-size:1rem;border-radius:999px}
 
+  /* Everything (links, language, instagram, subscribe) now lives inside the
+     slide-in menu. The top bar shows only brand + toggles + hamburger. */
+  .site-header nav{flex-direction:column;align-items:stretch;gap:2px}
+  .site-header nav .lang-toggle{margin-top:18px;align-self:flex-start;transform:none}
+  .site-header nav .lang-toggle button{padding:.5em 1.1em;font-size:.9rem}
+  .site-header nav .ig-nav{display:flex;padding:15px 0;border-bottom:1px solid var(--line)}
+  .site-header nav .subscribe{display:block}
+  .tqt-toggle{width:36px;height:36px;flex-shrink:0}
+  .header-tools{gap:7px;flex-shrink:0}
+
   /* tighter header so everything fits a 360px phone */
   .site-header{padding:12px 16px;gap:10px}
-  .brand{font-size:1.35rem}
-  .brand-wrap{gap:9px;min-width:0}
-  .logo{height:36px}
+  .brand{font-size:1.3rem;white-space:nowrap}
+  .brand-wrap{gap:8px;min-width:0;flex-shrink:1;overflow:hidden}
+  .logo{height:34px;flex-shrink:0}
+  .tagline{display:none}
+  /* header row: brand left, controls right, allowed to wrap to a 2nd line if needed */
+  .site-header{flex-wrap:wrap;row-gap:10px}
+  .brand-wrap{flex:1 1 auto;max-width:60%}
+  .nav-right{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;
+    gap:10px;flex:1 1 auto;min-width:0}
+  /* on recipe pages the text nav links crowd the bar — hide them on phones;
+     the logo returns home and each recipe has a "← all recipes" link */
+  .nav-right > nav{display:none}
+  .lang-toggle{flex-shrink:0}
+  .nav-right .ig-nav .ig-nav-handle{display:none}  /* icon only, saves width */
+  .nav-right .subscribe{padding:8px 16px;font-size:.9rem}
   .tqt-toggle{width:38px;height:38px}
 
   /* calmer rhythm */
   .hero-art{max-height:58vh}
-  .about,.week,.news,
+  .about,.week,.news{padding-top:56px;padding-bottom:56px}
   .week{padding-bottom:64px}
   .week h2{margin-bottom:32px}
   .ccard{min-height:230px}

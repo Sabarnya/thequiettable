@@ -5,7 +5,7 @@
    (create a free account at buttondown.com first). That's the only
    change needed to make every subscribe button on the site work.
    ============================================================ */
-var NEWSLETTER_USERNAME = "the_quiet_table";
+var NEWSLETTER_USERNAME = "YOUR_BUTTONDOWN_USERNAME";
 /* ============================================================ */
 
 (function () {
