@@ -814,22 +814,24 @@ body.nav-open .nav-scrim{opacity:1;visibility:visible}
 
   /* tighter header so everything fits a 360px phone */
   .site-header{padding:12px 16px;gap:10px}
-  .brand{font-size:1.3rem;white-space:nowrap}
   .brand-wrap{gap:8px;min-width:0;flex-shrink:1;overflow:hidden}
   .logo{height:34px;flex-shrink:0}
   .tagline{display:none}
-  /* header row: brand left, controls right, allowed to wrap to a 2nd line if needed */
-  .site-header{flex-wrap:wrap;row-gap:10px}
-  .brand-wrap{flex:1 1 auto;max-width:60%}
-  .nav-right{display:flex;flex-wrap:wrap;justify-content:flex-end;align-items:center;
-    gap:10px;flex:1 1 auto;min-width:0}
-  /* on recipe pages the text nav links crowd the bar — hide them on phones;
-     the logo returns home and each recipe has a "← all recipes" link */
-  .nav-right > nav{display:none}
+  /* Keep the header on ONE clean line. When space is tight, the brand collapses
+     to just the logo so the controls never get pushed to a second row. */
+  .site-header{flex-wrap:nowrap;gap:8px}
+  .brand-wrap{flex:0 0 auto;min-width:0}
+  .brand{display:none}          /* hide the "The quiet table" text — logo stays */
+  .brand-logo{flex-shrink:0}
+  .nav-right{display:flex;align-items:center;gap:8px;flex:0 1 auto;min-width:0;
+    overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .nav-right::-webkit-scrollbar{display:none}
+  .nav-right > nav{display:flex;gap:12px}
+  .nav-right .navlink{font-size:.9rem}
+  .nav-right .ig-nav .ig-nav-handle{display:none}  /* Instagram icon only */
   .lang-toggle{flex-shrink:0}
-  .nav-right .ig-nav .ig-nav-handle{display:none}  /* icon only, saves width */
-  .nav-right .subscribe{padding:8px 16px;font-size:.9rem}
-  .tqt-toggle{width:38px;height:38px}
+  .nav-right .subscribe{padding:8px 14px;font-size:.88rem;flex-shrink:0}
+  .tqt-toggle{width:36px;height:36px;flex-shrink:0}
 
   /* calmer rhythm */
   .hero-art{max-height:58vh}
