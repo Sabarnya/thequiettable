@@ -199,6 +199,10 @@
       });
     }
 
+    // Language toggle lives beside the moon/music on the bar (not in the menu).
+    var langToggle = header.querySelector(".lang-toggle");
+    if (langToggle) tools.appendChild(langToggle);
+
     moodBtn = mkToggle("mood-btn", "Toggle evening mode");
     tools.appendChild(moodBtn);
     onTap(moodBtn, function () {
@@ -230,7 +234,6 @@
     var lang = header.querySelector(".lang-toggle");
     var subscribe = header.querySelector(".subscribe");
     var igNav = header.querySelector(".ig-nav");
-    if (lang && nav && !nav.contains(lang)) nav.appendChild(lang);
     if (igNav && nav && !nav.contains(igNav)) nav.appendChild(igNav);
     if (subscribe && nav && !nav.contains(subscribe)) nav.appendChild(subscribe);
 
