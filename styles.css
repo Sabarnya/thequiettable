@@ -817,21 +817,20 @@ body.nav-open .nav-scrim{opacity:1;visibility:visible}
   .brand-wrap{gap:8px;min-width:0;flex-shrink:1;overflow:hidden}
   .logo{height:34px;flex-shrink:0}
   .tagline{display:none}
-  /* Keep the header on ONE clean line. When space is tight, the brand collapses
-     to just the logo so the controls never get pushed to a second row. */
-  .site-header{flex-wrap:nowrap;gap:8px}
-  .brand-wrap{flex:0 0 auto;min-width:0}
-  .brand{display:none}          /* hide the "The quiet table" text — logo stays */
+  /* MOBILE HEADER — keep the bar minimal. Only logo + moon + music + hamburger
+     stay on the bar; the nav links, language toggle, Instagram and Subscribe all
+     live inside the slide-in menu (mood.js moves them into <nav>). */
+  .site-header{flex-wrap:nowrap;gap:10px;justify-content:space-between}
+  .brand-wrap{flex:0 1 auto;min-width:0}
+  .brand{display:none}                 /* logo alone represents the brand here */
   .brand-logo{flex-shrink:0}
-  .nav-right{display:flex;align-items:center;gap:8px;flex:0 1 auto;min-width:0;
-    overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-  .nav-right::-webkit-scrollbar{display:none}
-  .nav-right > nav{display:flex;gap:12px}
-  .nav-right .navlink{font-size:.9rem}
-  .nav-right .ig-nav .ig-nav-handle{display:none}  /* Instagram icon only */
-  .lang-toggle{flex-shrink:0}
-  .nav-right .subscribe{padding:8px 14px;font-size:.88rem;flex-shrink:0}
-  .tqt-toggle{width:36px;height:36px;flex-shrink:0}
+  .nav-right{display:contents}          /* let its children be placed by the rules below */
+
+  /* the tools cluster (moon, music, hamburger) sits at the right, always visible */
+  .header-tools{display:flex;align-items:center;gap:8px;flex-shrink:0}
+  .tqt-toggle{width:38px;height:38px;flex-shrink:0}
+
+
 
   /* calmer rhythm */
   .hero-art{max-height:58vh}

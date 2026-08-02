@@ -224,6 +224,16 @@
     navToggle.innerHTML = "<span></span>";
     tools.appendChild(navToggle);
 
+    // Move the language toggle and Subscribe button into the nav panel so they
+    // live inside the slide-in menu on mobile (CSS decides where they show).
+    var navRight = header.querySelector(".nav-right") || header;
+    var lang = header.querySelector(".lang-toggle");
+    var subscribe = header.querySelector(".subscribe");
+    var igNav = header.querySelector(".ig-nav");
+    if (lang && nav && !nav.contains(lang)) nav.appendChild(lang);
+    if (igNav && nav && !nav.contains(igNav)) nav.appendChild(igNav);
+    if (subscribe && nav && !nav.contains(subscribe)) nav.appendChild(subscribe);
+
     var scrim = document.createElement("div");
     scrim.className = "nav-scrim";
     document.body.appendChild(scrim);
