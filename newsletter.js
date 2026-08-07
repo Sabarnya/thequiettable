@@ -1,13 +1,7 @@
 /* The Quiet Table — newsletter signup.
-
-   ============================================================
-   EDIT THIS ONE LINE. Put your Buttondown username in the quotes
-   (create a free account at buttondown.com first). That's the only
-   change needed to make every subscribe button on the site work.
-   ============================================================ */
-var NEWSLETTER_USERNAME = "the_quiet_table";
-/* ============================================================ */
-
+   Submits through our own secure endpoint /api/subscribe (a Cloudflare Pages
+   Function), which holds the Buttondown API key server-side and returns a real
+   success/failure — so subscriptions are never silently dropped. */
 (function () {
   function isBn() { return document.body.classList.contains("bn"); }
 
@@ -30,38 +24,45 @@ var NEWSLETTER_USERNAME = "the_quiet_table";
       var email = ((input && input.value) || "").trim();
       if (!email) return;
 
-      // Not configured yet — tell the owner instead of failing silently.
-      if (NEWSLETTER_USERNAME === "YOUR_BUTTONDOWN_USERNAME") {
-        showMsg(form, isBn()
-          ? "নিউজলেটার এখনো সেট করা হয়নি — newsletter.js-এ আপনার Buttondown ইউজারনেম দিন (README দেখুন)।"
-          : "Newsletter isn't connected yet — add your Buttondown username in newsletter.js (see README).", true);
-        return;
-      }
-
       var label = btn.innerHTML;
       btn.disabled = true;
       btn.textContent = isBn() ? "পাঠানো হচ্ছে…" : "Sending…";
 
-      var data = new FormData();
-      data.append("email", email);
-
-      fetch("https://buttondown.com/api/emails/embed-subscribe/" + NEWSLETTER_USERNAME, {
+      fetch("/api/subscribe", {
         method: "POST",
-        body: data,
-        mode: "no-cors"
-      }).then(function () {
-        input.value = "";
-        showMsg(form, isBn()
-          ? "ধন্যবাদ — কনফার্ম করতে আপনার ইনবক্স দেখুন। ♥"
-          : "Thank you — check your inbox to confirm. ♥", false);
-      }).catch(function () {
-        showMsg(form, isBn()
-          ? "কিছু একটা সমস্যা হলো। আবার চেষ্টা করুন।"
-          : "Something went wrong — please try again.", true);
-      }).finally(function () {
-        btn.disabled = false;
-        btn.innerHTML = label;
-      });
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email })
+      })
+        .then(function (res) { return res.json().then(function (d) { return { ok: res.ok, d: d }; }); })
+        .then(function (r) {
+          if (r.ok && r.d && r.d.ok) {
+            input.value = "";
+            showMsg(form, isBn()
+              ? (r.d.already
+                  ? "আপনি তো আগেই যুক্ত আছেন — ধন্যবাদ! ♥"
+                  : "ধন্যবাদ — কনফার্ম করতে আপনার ইনবক্স দেখুন। ♥")
+              : (r.d.already
+                  ? "You're already subscribed — thank you! ♥"
+                  : "Thank you — check your inbox to confirm. ♥"), false);
+          } else if (r.d && r.d.error === "invalid_email") {
+            showMsg(form, isBn()
+              ? "ইমেল ঠিকানাটি একবার দেখে নিন।"
+              : "That email doesn't look right — please check it.", true);
+          } else {
+            showMsg(form, isBn()
+              ? "কিছু একটা সমস্যা হলো। একটু পরে আবার চেষ্টা করুন।"
+              : "Something went wrong — please try again in a moment.", true);
+          }
+        })
+        .catch(function () {
+          showMsg(form, isBn()
+            ? "সংযোগে সমস্যা হলো। আবার চেষ্টা করুন।"
+            : "Connection problem — please try again.", true);
+        })
+        .finally(function () {
+          btn.disabled = false;
+          btn.innerHTML = label;
+        });
     });
   });
 })();
