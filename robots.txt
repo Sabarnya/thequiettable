@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thequiettable.co/sitemap.xml

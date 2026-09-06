@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>The Quiet Table</title>
+    <link>https://thequiettable.co</link>
+    <description>Slow, seasonal recipes and the stories that go with them.</description>
+    <language>en</language>
+    <lastBuildDate>Sun, 06 Sep 2026 08:29:11 +0000</lastBuildDate>
+    <item>
+      <title>New York Cheesecake</title>
+      <link>https://thequiettable.co/recipes/new-york-cheesecake.html</link>
+      <guid>https://thequiettable.co/recipes/new-york-cheesecake.html</guid>
+      <category>Sweets</category>
+      <pubDate>Wed, 12 Aug 2026 00:00:00 +0000</pubDate>
+      <description>The first cake I ever baked — and still the kindest.</description>
+    </item>
+    <item>
+      <title>Macaron</title>
+      <link>https://thequiettable.co/recipes/macaron.html</link>
+      <guid>https://thequiettable.co/recipes/macaron.html</guid>
+      <category>Sweets</category>
+      <pubDate>Mon, 10 Aug 2026 00:00:00 +0000</pubDate>
+      <description>The failure that started it all — precision, and one act of instinct.</description>
+    </item>
+    <item>
+      <title>Alchemy of Failure</title>
+      <link>https://thequiettable.co/recipes/from-failure-ricotta-cake.html</link>
+      <guid>https://thequiettable.co/recipes/from-failure-ricotta-cake.html</guid>
+      <category>Sweets</category>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <description>A failed bake that became something better.</description>
+    </item>
+  </channel>
+</rss>
