@@ -17,6 +17,9 @@ SITE_DESC  = "Slow, seasonal recipes and the stories that go with them."
 
 # ---- Newest first. date = when published (YYYY-MM-DD). ----
 RECIPES = [
+  {"slug":"chocolate-cookies","title":"Chocolate Cookies",
+   "category":"Sweets","date":"2026-09-21",
+   "description":"Crisp at the edge, soft in the middle — easy as anything."},
   {"slug":"pistachio-cheesecake","title":"Pistachio Cheesecake",
    "category":"Sweets","date":"2026-09-19",
    "description":"Pale green, never brown — precision, dressed up."},
